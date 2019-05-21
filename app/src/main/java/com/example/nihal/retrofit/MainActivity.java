@@ -80,8 +80,8 @@ public class MainActivity extends AppCompatActivity implements onItemClickListen
             }
         });
     }
-    public void onItemClick(int postion, View view){
-        String id1 = data.get(postion).getId();
+    public void onItemClick(int position, View view){
+        String id1 = data.get(position).getId();
         //Toast.makeText(MainActivity.this, "please try again", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MainActivity.this,DetailActivity.class);
         intent.putExtra("ID",id1);

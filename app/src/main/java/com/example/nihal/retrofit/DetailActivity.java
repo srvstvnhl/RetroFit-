@@ -64,10 +64,10 @@ public class DetailActivity extends AppCompatActivity {
                 .baseUrl("https://www.ultimatebattle.in/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        RetrieveDataInterface datarequest = retrofit.create(RetrieveDataInterface.class);
+        RetrieveDataInterface retrieveDataInterface = retrofit.create(RetrieveDataInterface.class);
 
-        Call<MyResponse> result = datarequest.getTournamentDetails(tournamentId);
-        result.enqueue(new Callback<MyResponse>() {
+        Call<MyResponse> call = retrieveDataInterface.getTournamentDetails(tournamentId);
+        call.enqueue(new Callback<MyResponse>() {
             @Override
             public void onResponse(Call<MyResponse> call, Response<MyResponse> response) {
 
